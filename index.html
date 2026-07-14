@@ -8,14 +8,28 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="foot-mark">
+        <g transform="rotate(-6)">
+          <ellipse cx="0" cy="-95" rx="96" ry="100" fill="currentColor"/>
+          <path d="M -84,-95 L 84,-95 L 66,150 L -38,150 Z" fill="currentColor"/>
+          <ellipse cx="14" cy="165" rx="66" ry="74" fill="currentColor"/>
+          <ellipse cx="64" cy="-262" rx="36" ry="44" fill="currentColor"/>
+          <ellipse cx="10" cy="-285" rx="23" ry="28" fill="currentColor"/>
+          <ellipse cx="-36" cy="-272" rx="20" ry="24" fill="currentColor"/>
+          <ellipse cx="-74" cy="-246" rx="17" ry="20" fill="currentColor"/>
+          <ellipse cx="-103" cy="-212" rx="14" ry="16" fill="currentColor"/>
+        </g>
+      </g>
+    </defs>
+  </svg>
+
   <header class="site">
     <div class="wrap">
       <a class="brand" href="./">
-        <svg width="26" height="26" viewBox="0 0 100 100" aria-hidden="true">
-          <rect width="100" height="100" rx="24" fill="#131722"/>
-          <ellipse cx="47" cy="42" rx="16" ry="19" fill="#EFA43E"/>
-          <circle cx="51" cy="74" r="9" fill="#D98A27"/>
-          <path d="M78 14a9 9 0 1 0 9 12 11 11 0 1 1-9-12z" fill="#F5EDD9"/>
+        <svg width="24" height="24" viewBox="-190 -190 380 380" style="color:#EFA43E" aria-hidden="true">
+          <use href="#foot-mark" transform="translate(0,25) scale(0.44)"/>
         </svg>
         사뿐
       </a>
@@ -29,34 +43,68 @@
   <main class="wrap">
     <section class="hero">
       <div class="mark">
-        <svg width="64" height="64" viewBox="0 0 100 100" aria-hidden="true">
-          <ellipse cx="47" cy="38" rx="17" ry="21" fill="#EFA43E"/>
-          <circle cx="52" cy="74" r="10" fill="#D98A27"/>
-          <path d="M80 8a10 10 0 1 0 10 14 12 12 0 1 1-10-14z" fill="#F5EDD9"/>
+        <svg width="76" height="76" viewBox="-190 -190 380 380" style="color:#EFA43E" aria-hidden="true">
+          <use href="#foot-mark" transform="translate(-14,30) scale(0.42)"/>
+          <path d="M 122,-152 a 34,34 0 1 0 34,44 40,40 0 1 1 -34,-44 z" fill="#F5EDD9"/>
         </svg>
       </div>
       <h1>층간소음,<br /><em>배려로 풀고</em> 자료로 지키다</h1>
       <p class="lede">사뿐은 소음을 측정해 법 기준으로 자동 판정하고,<br />싸움이 아니라 대화로 풀 수 있게 돕는 기록기입니다.</p>
+      <p class="soon">iOS · App Store 출시 준비 중</p>
+    </section>
+
+    <section class="section">
+      <h2>이렇게 쓰세요</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="lottie" data-lottie="flow-night"></div>
+          <p class="num">1 · 밤</p>
+          <h3>자기 전에 켜두세요</h3>
+          <p>화면을 잠가도 측정은 계속됩니다. 전화가 와서 끊겨도 자동으로 다시 시작하고, 임계값을 넘는 소음만 골라 기록합니다.</p>
+        </div>
+        <div class="step">
+          <div class="lottie" data-lottie="flow-morning"></div>
+          <p class="num">2 · 아침</p>
+          <h3>패턴을 확인하세요</h3>
+          <p>요일×시각 히트맵과 법 기준 자동 판정으로 "언제, 얼마나 자주"가 보입니다. 감정이 아니라 패턴이 대화를 만듭니다.</p>
+        </div>
+        <div class="step">
+          <div class="lottie" data-lottie="flow-note"></div>
+          <p class="num">3 · 대화</p>
+          <h3>부탁은 정중한 쪽지로</h3>
+          <p>윗집에 보여줄 대화용 한 장 요약과 쪽지 예시 문구가 준비되어 있습니다. 판정 없이 패턴과 부탁만 담아, 싸움이 나지 않는 자료입니다.</p>
+        </div>
+        <div class="step">
+          <div class="lottie" data-lottie="flow-report"></div>
+          <p class="num">4 · 그래도 안 풀리면</p>
+          <h3>자료를 꺼내세요</h3>
+          <p>관리사무소·층간소음 이웃사이센터 제출용 리포트 PDF와 조정·소송 참고용 원자료 CSV. 측정 시간과 조건까지 명시됩니다.</p>
+        </div>
+      </div>
     </section>
 
     <section class="section">
       <h2>기능</h2>
       <div class="features">
         <div class="feature">
+          <div class="lottie sm" data-lottie="feature-judge"></div>
           <h3>법 기준 자동 판정</h3>
-          <p>최고소음도(주 57 / 야 52dB)와 1분 등가소음도(주 39 / 야 34dB), "1시간 3회 이상" 규칙까지 자동으로 판정해 일지에 남깁니다.</p>
+          <p>최고소음도(주 57 / 야 52dB)와 1분 등가소음도(주 39 / 야 34dB), "1시간 3회 이상" 규칙까지 자동으로 판정합니다.</p>
         </div>
         <div class="feature">
-          <h3>밤새 켜두는 측정</h3>
-          <p>자기 전에 켜두면 화면을 잠가도 측정이 계속됩니다. 전화가 와도 자동으로 다시 시작합니다. 소리는 저장하지 않습니다.</p>
+          <div class="lottie sm" data-lottie="feature-quiet"></div>
+          <h3>목표는 다시 조용해지는 것</h3>
+          <p>이기는 게 아니라 풀리는 게 목표입니다. 야간에는 더 민감하게 감지하고, 화면도 밤에 맞게 어두워집니다.</p>
         </div>
         <div class="feature">
+          <div class="lottie sm" data-lottie="hero-footprints"></div>
           <h3>배려 가이드</h3>
-          <p>기록 → 쪽지 → 관리사무소 → 이웃사이센터 → 조정. 단계별 대응법과 정중한 쪽지 문구까지 준비되어 있습니다.</p>
+          <p>기록 → 쪽지 → 관리사무소 → 이웃사이센터 → 조정. 하지 말아야 할 것(보복소음·반복 방문의 위험)과 윗집을 위한 배려 팁까지.</p>
         </div>
         <div class="feature">
-          <h3>단계에 맞는 자료</h3>
-          <p>윗집에 보여줄 부드러운 한 장 요약, 기관 제출용 리포트 PDF, 조정·소송 참고용 원자료 CSV.</p>
+          <div class="lottie sm" data-lottie="feature-private"></div>
+          <h3>소리는 저장하지 않아요</h3>
+          <p>마이크는 기기 안에서 데시벨 계산에만 쓰입니다. 수치만 남고 소리는 사라집니다. 계정도, 서버도, 광고도 없습니다.</p>
         </div>
       </div>
     </section>
@@ -119,5 +167,18 @@
       © 2026 ForgeLab · Jason Lee — <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a>
     </div>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  <script>
+    document.querySelectorAll("[data-lottie]").forEach(function (el) {
+      lottie.loadAnimation({
+        container: el,
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "assets/lottie/" + el.dataset.lottie + ".json",
+      });
+    });
+  </script>
 </body>
 </html>
