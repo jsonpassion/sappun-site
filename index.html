@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>사뿐 — 층간소음 기록과 배려</title>
-  <meta name="description" content="층간소음을 배려로 풀게 돕는 iOS 기록기. 법 기준 자동 판정, 야간 측정, 대화용 요약과 제출용 리포트." />
+  <title>사뿐 — 조용한 밤을 되찾는 층간소음 기록</title>
+  <meta name="description" content="층간소음을 배려로 풀게 돕는 iOS 기록기. 소음을 재고 법 기준으로 자동 판정해 기록하고, 대화용 요약부터 제출용 리포트까지." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -35,137 +35,192 @@
         사뿐
       </a>
       <nav>
-        <a href="privacy.html">개인정보처리방침</a>
-        <a href="terms.html">이용약관</a>
+        <a href="#how">사용법</a>
+        <a href="#price">가격</a>
+        <a href="privacy.html">개인정보 처리방침</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
+  <main>
+    <!-- 히어로 -->
     <section class="hero">
-      <div class="mark">
-        <svg width="76" height="76" viewBox="-190 -190 380 380" style="color:#EFA43E" aria-hidden="true">
-          <use href="#foot-mark" transform="translate(-14,34) scale(0.48)"/>
-          <path d="M 122,-152 a 34,34 0 1 0 34,44 40,40 0 1 1 -34,-44 z" fill="#F5EDD9"/>
-        </svg>
-      </div>
-      <h1>층간소음, <em>배려로 풀고</em> 자료로 지키다</h1>
-      <p class="lede">사뿐은 소음을 측정해 법 기준으로 자동 판정하고, 싸움이 아니라 대화로 풀도록 돕는 기록기입니다.</p>
-      <p class="soon">iOS · App Store 출시 준비 중</p>
-    </section>
-
-    <section class="section">
-      <h2>이렇게 쓰세요</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="lottie" data-lottie="flow-night"></div>
-          <p class="num">1 · 밤</p>
-          <h3>자기 전에 켜두세요</h3>
-          <p>화면을 잠가도 측정은 계속됩니다. 전화가 와도 자동으로 다시 시작하고, 정해둔 기준을 넘는 소음만 자동으로 기록합니다.</p>
+      <div class="wrap">
+        <div class="glow"></div>
+        <div class="mark">
+          <svg width="76" height="76" viewBox="-190 -190 380 380" style="color:#EFA43E" aria-hidden="true">
+            <use href="#foot-mark" transform="translate(-14,34) scale(0.48)"/>
+            <path d="M 122,-152 a 34,34 0 1 0 34,44 40,40 0 1 1 -34,-44 z" fill="#F5EDD9"/>
+          </svg>
         </div>
-        <div class="step">
-          <div class="lottie" data-lottie="flow-morning"></div>
-          <p class="num">2 · 아침</p>
-          <h3>패턴을 확인하세요</h3>
-          <p>요일×시각 히트맵과 법 기준 자동 판정으로 언제 얼마나 자주 들렸는지 한눈에 보입니다. 감정이 아니라 패턴이 대화를 만듭니다.</p>
-        </div>
-        <div class="step">
-          <div class="lottie" data-lottie="flow-note"></div>
-          <p class="num">3 · 대화</p>
-          <h3>부탁은 정중한 쪽지로</h3>
-          <p>윗집에 건넬 한 장 요약과 쪽지 예시 문구가 준비되어 있습니다. 판정 없이 패턴과 부탁만 담아, 얼굴 붉히지 않고 건넬 수 있는 자료입니다.</p>
-        </div>
-        <div class="step">
-          <div class="lottie" data-lottie="flow-report"></div>
-          <p class="num">4 · 그래도 안 풀리면</p>
-          <h3>자료를 꺼내세요</h3>
-          <p>관리사무소와 층간소음 이웃사이센터에 낼 리포트 PDF, 조정·소송에 참고할 원자료 CSV까지. 측정한 시간과 조건이 함께 기록됩니다.</p>
-        </div>
+        <h1>조용한 밤을 되찾는<br /><em>가장 사뿐한 방법</em></h1>
+        <p class="lede">소음을 재고 법 기준으로 자동 판정해 기록해요. 배려로 푸는 길을 먼저 안내하고, 그래도 안 풀릴 땐 제출용 자료가 되어 줍니다.</p>
+        <div class="soon">iOS · App Store 출시 준비 중</div>
+        <div class="scroll-cue">아래로<span></span></div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>기능</h2>
-      <div class="features">
-        <div class="feature">
-          <div class="lottie sm" data-lottie="feature-judge"></div>
-          <h3>법 기준 자동 판정</h3>
-          <p>최고소음도(주 57 / 야 52dB)와 1분 등가소음도(주 39 / 야 34dB), "1시간 3회 이상" 규칙까지 자동으로 판정합니다.</p>
+    <!-- 공감 -->
+    <section class="empathy">
+      <div class="wrap narrow reveal">
+        <p>이기고 싶은 게 아니라,<br /><b>그냥 다시 자고 싶은 거예요.</b></p>
+      </div>
+    </section>
+
+    <!-- 사용 흐름 -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">사용 흐름</span>
+          <h2>밤에 켜두고, 아침에 확인하고</h2>
+          <p>측정부터 대화, 마지막 자료까지 — 한 걸음씩 사뿐하게.</p>
         </div>
-        <div class="feature">
-          <div class="lottie sm" data-lottie="feature-quiet"></div>
-          <h3>목표는 다시 조용해지는 것</h3>
-          <p>이기는 게 아니라 풀리는 게 목표입니다. 야간에는 더 민감하게 감지하고, 화면도 밤에 맞게 어두워집니다.</p>
-        </div>
-        <div class="feature">
-          <div class="lottie sm" data-lottie="hero-footprints"></div>
-          <h3>배려 가이드</h3>
-          <p>기록 → 쪽지 → 관리사무소 → 이웃사이센터 → 조정. 하지 말아야 할 것(보복소음·반복 방문의 위험)과 윗집을 위한 배려 팁까지.</p>
-        </div>
-        <div class="feature">
-          <div class="lottie sm" data-lottie="feature-private"></div>
-          <h3>소리는 저장하지 않아요</h3>
-          <p>마이크는 기기 안에서 데시벨 계산에만 쓰입니다. 수치만 남고 소리는 사라집니다. 계정도, 서버도, 광고도 없습니다.</p>
+        <div class="steps">
+          <article class="step-row reveal">
+            <div class="step-media reveal-l"><div class="lottie" data-lottie="flow-night"></div></div>
+            <div class="step-body reveal-r">
+              <span class="step-num">01 · 밤</span>
+              <h3>자기 전에 켜두세요</h3>
+              <p>화면을 잠가도 측정은 계속됩니다. 전화가 와도 자동으로 다시 시작하고, 정해둔 기준을 넘는 소음만 조용히 기록해요.</p>
+            </div>
+          </article>
+
+          <article class="step-row reverse reveal">
+            <div class="step-media reveal-r"><div class="lottie" data-lottie="flow-morning"></div></div>
+            <div class="step-body reveal-l">
+              <span class="step-num">02 · 아침</span>
+              <h3>패턴이 보입니다</h3>
+              <p>요일×시각 히트맵과 법 기준 자동 판정으로 언제 얼마나 자주 들렸는지 한눈에. 감정이 아니라 패턴이 대화를 만듭니다.</p>
+            </div>
+          </article>
+
+          <article class="step-row reveal">
+            <div class="step-media reveal-l"><div class="lottie" data-lottie="flow-note"></div></div>
+            <div class="step-body reveal-r">
+              <span class="step-num">03 · 대화</span>
+              <h3>부탁은 정중한 쪽지로</h3>
+              <p>윗집에 건넬 한 장 요약과 예시 문구가 준비돼 있어요. 판정 없이 패턴과 부탁만 담아, 얼굴 붉히지 않고 건넬 수 있는 자료입니다.</p>
+            </div>
+          </article>
+
+          <article class="step-row reverse reveal">
+            <div class="step-media reveal-r"><div class="lottie" data-lottie="flow-report"></div></div>
+            <div class="step-body reveal-l">
+              <span class="step-num">04 · 그다음</span>
+              <h3>자료가 되어 줍니다</h3>
+              <p>관리사무소·이웃사이센터에 낼 리포트 PDF, 조정·소송에 참고할 원자료 CSV까지. 측정한 시간과 조건이 함께 기록됩니다.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- 기능 -->
     <section class="section">
-      <h2>가격</h2>
-      <div class="plans">
-        <div class="plan">
-          <h3>무료</h3>
-          <p class="price">₩0</p>
-          <ul>
-            <li>실시간 측정과 자동 판정</li>
-            <li>최근 7일 일지 열람</li>
-            <li>배려 가이드 전체</li>
-            <li>대화용 한 장 요약</li>
-          </ul>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">핵심 기능</span>
+          <h2>사뿐이 하는 일</h2>
         </div>
-        <div class="plan pro">
-          <div class="plan-head">
-            <h3>사뿐 Pro</h3>
-            <span class="tag">출시 특가</span>
+        <div class="features">
+          <div class="feature reveal" style="--d:0s">
+            <div class="lottie" data-lottie="feature-judge"></div>
+            <h3>법 기준 자동 판정</h3>
+            <p>최고소음도(주 57 / 야 52dB)와 1분 등가소음도(주 39 / 야 34dB), ‘1시간 3회 이상’ 규칙까지 자동으로.</p>
           </div>
-          <div class="price-rows">
-            <div class="price-row"><span class="tier">월간</span><span class="amt"><s>₩7,900</s><b>₩4,900</b></span></div>
-            <div class="price-row"><span class="tier">연간</span><span class="amt"><s>₩49,000</s><b>₩29,000</b></span></div>
-            <div class="price-row"><span class="tier">평생</span><span class="amt"><s>₩89,000</s><b>₩49,000</b></span></div>
+          <div class="feature reveal" style="--d:.08s">
+            <div class="lottie" data-lottie="feature-quiet"></div>
+            <h3>목표는 다시 조용해지는 것</h3>
+            <p>이기는 게 아니라 풀리는 게 목표예요. 야간엔 더 민감하게, 화면도 밤에 맞게 어두워집니다.</p>
           </div>
-          <p class="promo-note">출시 기념 한정 특가로, 이후 정상가로 조정될 수 있습니다.</p>
-          <ul>
-            <li>무제한 보관 열람 — 기록은 무료에서도 지워지지 않습니다</li>
-            <li>공식 제출용 리포트 PDF</li>
-            <li>원자료 CSV 내보내기</li>
-          </ul>
+          <div class="feature reveal" style="--d:.16s">
+            <div class="lottie" data-lottie="hero-footprints"></div>
+            <h3>배려 가이드</h3>
+            <p>기록 → 쪽지 → 관리사무소 → 이웃사이센터 → 조정. 하지 말아야 할 것과 윗집을 위한 배려 팁까지.</p>
+          </div>
+          <div class="feature reveal" style="--d:.24s">
+            <div class="lottie" data-lottie="feature-private"></div>
+            <h3>소리는 저장하지 않아요</h3>
+            <p>마이크는 데시벨 계산에만. 수치만 남고 소리는 사라져요. 계정도, 서버도, 광고도 없습니다.</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- 가격 -->
+    <section class="section" id="price">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">가격</span>
+          <h2>출시 특가로 시작하세요</h2>
+          <p>측정·일지·가이드·대화용 요약은 계속 무료. 분쟁이 길어질 때 필요한 것만 Pro에 있어요.</p>
+        </div>
+        <div class="plans">
+          <div class="plan reveal">
+            <h3>무료</h3>
+            <p class="price">₩0</p>
+            <ul>
+              <li>실시간 측정과 자동 판정</li>
+              <li>최근 7일 일지 열람</li>
+              <li>배려 가이드 전체</li>
+              <li>대화용 한 장 요약</li>
+            </ul>
+          </div>
+          <div class="plan pro reveal" style="--d:.1s">
+            <div class="plan-head">
+              <h3>사뿐 Pro</h3>
+              <span class="tag">출시 특가</span>
+            </div>
+            <div class="price-rows">
+              <div class="price-row"><span class="tier">월간</span><span class="amt"><s>₩7,900</s><b>₩4,900</b></span></div>
+              <div class="price-row"><span class="tier">연간</span><span class="amt"><s>₩49,000</s><b>₩29,000</b></span></div>
+              <div class="price-row"><span class="tier">평생</span><span class="amt"><s>₩89,000</s><b>₩49,000</b></span></div>
+            </div>
+            <p class="promo-note">출시 기념 한정 특가로, 이후 정상가로 조정될 수 있습니다.</p>
+            <ul>
+              <li>무제한 보관 열람 — 기록은 무료에서도 지워지지 않아요</li>
+              <li>공식 제출용 리포트 PDF</li>
+              <li>원자료 CSV 내보내기</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
     <section class="section faq">
-      <h2>자주 묻는 질문</h2>
-      <details>
-        <summary>측정값이 법적 증거가 되나요?</summary>
-        <p>스마트폰 측정은 소음·진동 공정시험기준에 따른 공인 측정을 대체하지 않습니다. 사뿐의 기록은 층간소음 이웃사이센터 상담·현장측정 신청, 관리사무소 민원, 분쟁 조정의 참고자료로 쓰입니다 — 공인 측정을 부르게 만드는 자료입니다.</p>
-      </details>
-      <details>
-        <summary>소리가 녹음되나요?</summary>
-        <p>아니요. 마이크 입력은 기기 안에서 데시벨 수치 계산에만 실시간으로 사용되고, 소리 자체는 저장·전송되지 않습니다. 대화 내용도 인식하지 않습니다.</p>
-      </details>
-      <details>
-        <summary>밤에 자면서도 측정이 되나요?</summary>
-        <p>네. 측정을 켜두고 화면을 잠그면 밤새 이어집니다. 배터리를 위해 충전 연결을 권장합니다.</p>
-      </details>
-      <details>
-        <summary>우리 집이 윗집이라면?</summary>
-        <p>사뿐을 거꾸로 쓸 수 있습니다. 우리 집 소리를 측정해 아래층에 얼마나 전해질지 가늠하고, 가이드의 배려 팁(매트·슬리퍼·시간대)을 참고해 보세요.</p>
-      </details>
+      <div class="wrap narrow">
+        <div class="section-head reveal">
+          <span class="eyebrow">자주 묻는 질문</span>
+          <h2>궁금한 점</h2>
+        </div>
+        <div class="reveal">
+          <details>
+            <summary>측정값이 법적 증거가 되나요?</summary>
+            <p>스마트폰 측정은 소음·진동 공정시험기준에 따른 공인 측정을 대체하지 않습니다. 사뿐의 기록은 층간소음 이웃사이센터 상담·현장측정 신청, 관리사무소 민원, 분쟁 조정의 참고자료로 쓰입니다 — 공인 측정을 부르게 만드는 자료예요.</p>
+          </details>
+          <details>
+            <summary>소리가 녹음되나요?</summary>
+            <p>아니요. 마이크 입력은 기기 안에서 데시벨 수치 계산에만 실시간으로 쓰이고, 소리 자체는 저장·전송되지 않습니다. 대화 내용도 인식하지 않아요.</p>
+          </details>
+          <details>
+            <summary>밤에 자면서도 측정이 되나요?</summary>
+            <p>네. 측정을 켜두고 화면을 잠그면 밤새 이어집니다. 배터리를 위해 충전 연결을 권장해요.</p>
+          </details>
+          <details>
+            <summary>우리 집이 윗집이라면?</summary>
+            <p>사뿐을 거꾸로 쓸 수 있어요. 우리 집 소리를 측정해 아래층에 얼마나 전해질지 가늠하고, 가이드의 배려 팁(매트·슬리퍼·시간대)을 참고해 보세요.</p>
+          </details>
+        </div>
+      </div>
     </section>
 
-    <section class="section">
-      <div class="notice">
-        사뿐의 측정값은 참고용이며 공인 측정을 대체하지 않습니다. 앱은 법률 자문을 제공하지 않습니다.
+    <!-- 마무리 -->
+    <section class="closing">
+      <div class="wrap narrow reveal">
+        <h2>조용한 밤은,<br />생각보다 가까이 있어요.</h2>
+        <p>사뿐과 함께, 오늘 밤부터.</p>
+        <p class="disclaimer">사뿐의 측정값은 참고용이며 공인 측정을 대체하지 않습니다. 앱은 법률 자문을 제공하지 않습니다.</p>
       </div>
     </section>
   </main>
@@ -184,15 +239,27 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
   <script>
+    // Lottie
     document.querySelectorAll("[data-lottie]").forEach(function (el) {
       lottie.loadAnimation({
-        container: el,
-        renderer: "svg",
-        loop: true,
-        autoplay: true,
+        container: el, renderer: "svg", loop: true, autoplay: true,
         path: "assets/lottie/" + el.dataset.lottie + ".json",
       });
     });
+
+    // 스크롤 리빌
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    document.querySelectorAll(".reveal, .reveal-l, .reveal-r").forEach(function (el) { io.observe(el); });
+
+    // 헤더 배경
+    var header = document.querySelector("header.site");
+    var onScroll = function () { header.classList.toggle("scrolled", window.scrollY > 8); };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
   </script>
 </body>
 </html>
