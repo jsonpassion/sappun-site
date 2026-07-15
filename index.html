@@ -45,8 +45,13 @@
   <main>
     <!-- 히어로 -->
     <section class="hero">
+      <div class="hero-video">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-night-poster.jpg">
+          <source src="assets/video/hero-night.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-scrim"></div>
+      </div>
       <div class="wrap">
-        <div class="glow"></div>
         <div class="mark">
           <svg width="76" height="76" viewBox="-190 -190 380 380" style="color:#EFA43E" aria-hidden="true">
             <use href="#foot-mark" transform="translate(-14,34) scale(0.48)"/>
@@ -254,6 +259,23 @@
       });
     }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
     document.querySelectorAll(".reveal, .reveal-l, .reveal-r").forEach(function (el) { io.observe(el); });
+
+    // 히어로 영상 — 화면 밖이면 정지, 모션 최소화면 재생 안 함
+    var heroVideo = document.querySelector(".hero-video video");
+    if (heroVideo) {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        heroVideo.removeAttribute("autoplay");
+        heroVideo.pause();
+      } else {
+        var vio = new IntersectionObserver(function (es) {
+          es.forEach(function (e) {
+            if (e.isIntersecting) { heroVideo.play().catch(function () {}); }
+            else { heroVideo.pause(); }
+          });
+        }, { threshold: 0.1 });
+        vio.observe(heroVideo);
+      }
+    }
 
     // 헤더 배경
     var header = document.querySelector("header.site");

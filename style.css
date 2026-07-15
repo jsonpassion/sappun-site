@@ -87,22 +87,26 @@ nav a:hover { color: var(--ink); }
 .section-head p { color: var(--muted); font-size: 16px; margin-top: 12px; text-wrap: pretty; }
 
 /* ── 히어로 ───────────────────────────────── */
-.hero { text-align: center; padding: 118px 0 96px; position: relative; }
-.hero .glow {
-  position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
-  width: min(620px, 100vw); height: 620px; pointer-events: none;
-  background: radial-gradient(circle, rgba(239, 164, 62, 0.16), transparent 62%);
-  filter: blur(6px);
+.hero { text-align: center; padding: 132px 0 104px; position: relative; overflow: clip; }
+.hero-video { position: absolute; inset: 0; z-index: 0; pointer-events: none; background: #090b12 url("assets/video/hero-night-poster.jpg") center/cover no-repeat; }
+.hero-video video { width: 100%; height: 100%; object-fit: cover; }
+.hero-scrim {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(9, 11, 18, 0.42), rgba(9, 11, 18, 0.72) 72%),
+    linear-gradient(to bottom, rgba(9, 11, 18, 0.68) 0%, rgba(9, 11, 18, 0.32) 32%, rgba(9, 11, 18, 0.42) 62%, rgba(9, 11, 18, 0.86) 100%);
 }
+.hero > .wrap { position: relative; z-index: 1; }
+@media (prefers-reduced-motion: reduce) { .hero-video video { display: none; } }
 .hero .mark {
   position: relative; margin: 0 auto 30px; width: 96px; height: 96px; border-radius: 24px;
   background: linear-gradient(165deg, #1b2233, #0b0e17);
   display: flex; align-items: center; justify-content: center;
   border: 1px solid var(--line); box-shadow: 0 20px 60px -20px rgba(239, 164, 62, 0.4);
 }
-.hero h1 { position: relative; font-size: 56px; letter-spacing: -1.4px; line-height: 1.16; text-wrap: balance; }
+.hero h1 { font-size: 56px; letter-spacing: -1.4px; line-height: 1.16; text-wrap: balance; text-shadow: 0 2px 30px rgba(0, 0, 0, 0.6); }
 .hero h1 em { font-style: normal; color: var(--amber); }
-.hero p.lede { position: relative; color: var(--muted); font-size: 19px; margin: 22px auto 0; max-width: 620px; line-height: 1.65; text-wrap: pretty; }
+.hero p.lede { color: rgba(255, 255, 255, 0.82); font-size: 19px; margin: 22px auto 0; max-width: 620px; line-height: 1.65; text-wrap: pretty; text-shadow: 0 1px 20px rgba(0, 0, 0, 0.7); }
 .hero .soon {
   position: relative; display: inline-flex; align-items: center; gap: 8px; margin-top: 30px;
   font-size: 13.5px; color: var(--amber-soft);
