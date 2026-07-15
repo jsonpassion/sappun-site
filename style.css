@@ -16,6 +16,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", sans-serif;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  /* 한글은 어절(띄어쓰기) 단위로만 줄바꿈 — 단어 중간에서 끊기지 않게 */
+  word-break: keep-all;
 }
 
 .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
@@ -28,10 +30,15 @@ nav a { color: var(--muted); text-decoration: none; font-size: 14px; margin-left
 nav a:hover { color: var(--ink); }
 
 .hero { padding: 72px 0 56px; text-align: center; }
-.hero h1 { font-size: 44px; letter-spacing: -0.5px; line-height: 1.25; }
+.hero h1 { font-size: 44px; letter-spacing: -0.5px; line-height: 1.28; text-wrap: balance; }
 .hero h1 em { color: var(--amber); font-style: normal; }
-.hero p.lede { color: var(--muted); font-size: 18px; margin-top: 16px; }
-.hero p.soon { color: var(--amber-deep); font-size: 14px; margin-top: 20px; }
+.hero p.lede { color: var(--muted); font-size: 18px; margin-top: 18px; line-height: 1.6; text-wrap: pretty; }
+.hero p.soon { color: var(--amber-deep); font-size: 14px; margin-top: 22px; }
+@media (max-width: 560px) {
+  .hero { padding: 52px 0 40px; }
+  .hero h1 { font-size: 32px; }
+  .hero p.lede { font-size: 16px; }
+}
 .hero .mark { margin: 0 auto 28px; width: 96px; height: 96px; border-radius: 22px; background: linear-gradient(180deg, #191e2b, #0c0f18); display: flex; align-items: center; justify-content: center; border: 1px solid var(--line); }
 
 .steps { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -63,6 +70,16 @@ nav a:hover { color: var(--ink); }
 .plan ul { list-style: none; }
 .plan li { font-size: 14px; color: var(--muted); padding: 3px 0; }
 .plan li::before { content: "· "; color: var(--amber); }
+
+.plan-head { display: flex; align-items: center; gap: 9px; margin-bottom: 14px; }
+.tag { font-size: 11px; font-weight: 700; letter-spacing: 0.3px; color: var(--night); background: var(--amber); border-radius: 6px; padding: 3px 8px; }
+.price-rows { display: flex; flex-direction: column; gap: 9px; margin-bottom: 6px; }
+.price-row { display: flex; align-items: baseline; justify-content: space-between; }
+.price-row .tier { font-size: 14px; color: var(--muted); }
+.price-row .amt s { color: var(--muted); text-decoration: line-through; text-decoration-color: #e5484d; text-decoration-thickness: 2px; margin-right: 7px; }
+.price-row .amt b { color: var(--amber); font-weight: 700; font-size: 16px; }
+.promo-note { font-size: 12px; color: var(--muted); margin: 12px 0 4px; }
+
 @media (max-width: 560px) { .plans { grid-template-columns: 1fr; } }
 
 .faq details { border-bottom: 1px solid var(--line); padding: 14px 0; }
