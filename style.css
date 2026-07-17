@@ -46,6 +46,9 @@ header.site, main, footer.site { position: relative; z-index: 1; }
 .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
 .narrow { max-width: 760px; }
 
+/* 의미 단위가 줄바꿈으로 쪼개지지 않게 묶는 유틸 (예: '가장 사뿐한 방법') */
+.nb { white-space: nowrap; }
+
 a { color: inherit; }
 
 /* ── 헤더 ───────────────────────────────── */
@@ -88,7 +91,7 @@ nav a:hover { color: var(--ink); }
 
 /* ── 히어로 ───────────────────────────────── */
 .hero { text-align: center; padding: 132px 0 104px; position: relative; overflow: clip; }
-.hero-video { position: absolute; inset: 0; z-index: 0; pointer-events: none; background: #090b12 url("assets/video/hero-night-poster.jpg") center/cover no-repeat; }
+.hero-video { position: absolute; inset: 0; z-index: 0; pointer-events: none; background: #090b12 url("assets/video/hero-bed-poster.jpg") center/cover no-repeat; }
 .hero-video video { width: 100%; height: 100%; object-fit: cover; }
 .hero-scrim {
   position: absolute; inset: 0;
@@ -136,7 +139,7 @@ nav a:hover { color: var(--ink); }
 }
 .step-media .lottie { height: 190px; width: 100%; }
 .step-num { font-size: 13px; font-weight: 700; letter-spacing: 0.6px; color: var(--amber); }
-.step-body h3 { font-size: 22px; letter-spacing: -0.4px; margin: 10px 0 10px; }
+.step-body h3 { font-size: 22px; letter-spacing: -0.4px; margin: 10px 0 10px; text-wrap: balance; }
 .step-body p { color: var(--muted); font-size: 15.5px; line-height: 1.7; text-wrap: pretty; }
 
 /* ── 기능 그리드 ───────────────────────────── */
