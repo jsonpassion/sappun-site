@@ -72,6 +72,24 @@
       </div>
     </section>
 
+    <!-- 10초 요약 영상 -->
+    <section class="section story">
+      <div class="wrap narrow">
+        <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+          <span class="eyebrow">10초 요약</span>
+          <h2>밤이 어떻게 달라지는지</h2>
+          <p>참지도, 싸우지도 않고 — <span class="nb">머리맡에 두기만 하면 되는 밤.</span></p>
+        </div>
+        <figure class="story-frame reveal">
+          <video id="storyVideo" muted loop playsinline preload="none"
+                 poster="assets/video/story-poster.jpg">
+            <source src="assets/video/story.mp4" type="video/mp4" />
+          </video>
+          <button type="button" class="story-sound" id="storySound" aria-label="소리 켜기">🔈 소리 켜기</button>
+        </figure>
+      </div>
+    </section>
+
     <!-- 사용 흐름 -->
     <section class="section" id="how">
       <div class="wrap">
@@ -275,6 +293,28 @@
         }, { threshold: 0.1 });
         vio.observe(heroVideo);
       }
+    }
+
+    // 10초 요약 영상 — 보일 때만 재생, 소리 토글(캡션이 있어 기본은 음소거)
+    var story = document.getElementById("storyVideo");
+    var soundBtn = document.getElementById("storySound");
+    if (story) {
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduce) {
+        var sio = new IntersectionObserver(function (es) {
+          es.forEach(function (e) {
+            if (e.isIntersecting) { story.play().catch(function () {}); }
+            else { story.pause(); }
+          });
+        }, { threshold: 0.4 });
+        sio.observe(story);
+      }
+      soundBtn.addEventListener("click", function () {
+        story.muted = !story.muted;
+        soundBtn.textContent = story.muted ? "🔈 소리 켜기" : "🔊 소리 끄기";
+        soundBtn.setAttribute("aria-label", story.muted ? "소리 켜기" : "소리 끄기");
+        if (!story.muted) { story.play().catch(function () {}); }
+      });
     }
 
     // 헤더 배경

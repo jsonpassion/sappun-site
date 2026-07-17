@@ -125,6 +125,23 @@ nav a:hover { color: var(--ink); }
 .empathy p { font-size: 30px; font-weight: 600; letter-spacing: -0.6px; line-height: 1.45; text-wrap: balance; color: var(--ink); }
 .empathy p b { color: var(--amber); font-weight: 600; }
 
+/* ── 10초 요약 영상 ────────────────────────── */
+.story-frame {
+  position: relative; margin: 0 auto; width: 340px; max-width: 80vw;
+  border-radius: 30px; overflow: hidden; background: var(--night-2);
+  border: 1px solid var(--line);
+  box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.9), 0 0 70px -30px rgba(239, 164, 62, 0.45);
+}
+.story-frame video { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: var(--night); }
+.story-sound {
+  position: absolute; right: 10px; bottom: 10px;
+  font: inherit; font-size: 12px; font-weight: 600; color: var(--amber);
+  background: rgba(9, 11, 18, 0.72); border: 1px solid var(--amber-deep);
+  border-radius: 999px; padding: 7px 12px; cursor: pointer;
+  backdrop-filter: blur(6px); transition: background .2s;
+}
+.story-sound:hover { background: rgba(239, 164, 62, 0.18); }
+
 /* ── 사용 흐름(스텝 로우) ───────────────────── */
 .steps { display: flex; flex-direction: column; gap: 26px; }
 .step-row {
